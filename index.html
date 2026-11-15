@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Paru ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ min-height:100vh;
+ background:radial-gradient(circle at top,#76113f,#250018 65%,#10000c);
+ color:#fff;
+ font-family:'Tiro Devanagari Marathi',serif;
+ overflow-x:hidden;
+}
+
+/* Background stars */
+
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ background:
+ radial-gradient(circle at 15% 25%,#ff8ebc33,transparent 25%),
+ radial-gradient(circle at 85% 75%,#ff176633,transparent 30%);
+ pointer-events:none;
+}
+
+/* Floating hearts */
+
+.heart{
+ position:fixed;
+ bottom:-40px;
+ z-index:0;
+ pointer-events:none;
+ animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+ 0%{transform:translateY(0) rotate(0);opacity:0}
+ 15%{opacity:1}
+ 100%{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+/* Main */
+
+.container{
+ position:relative;
+ z-index:2;
+ width:92%;
+ max-width:760px;
+ margin:45px auto;
+ padding:35px 27px;
+ background:rgba(255,255,255,.075);
+ border:1px solid #ff9bc655;
+ border-radius:25px;
+ backdrop-filter:blur(18px);
+ box-shadow:0 0 50px #ff277644;
+ animation:show 1.5s ease;
+}
+
+@keyframes show{
+ from{opacity:0;transform:translateY(50px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+/* Header */
+
+.rose{
+ text-align:center;
+ font-size:55px;
+ animation:beat 2s infinite;
+}
+
+@keyframes beat{
+ 50%{transform:scale(1.15)}
+}
+
+h1{
+ text-align:center;
+ font-size:30px;
+ line-height:1.7;
+ color:#ffd0e4;
+ text-shadow:0 0 20px #ff4b94;
+ margin:15px 0;
+}
+
+.subtitle{
+ text-align:center;
+ font-family:'Dancing Script',cursive;
+ font-size:35px;
+ color:#ffb8d5;
+}
+
+.date{
+ text-align:center;
+ font-size:13px;
+ letter-spacing:3px;
+ color:#ffc1dc;
+ margin-top:15px;
+}
+
+.line{
+ width:75%;
+ height:2px;
+ margin:28px auto;
+ background:linear-gradient(90deg,transparent,#ff9fc7,transparent);
+}
+
+/* Letter */
+
+.letter{
+ font-size:16px;
+ line-height:2.15;
+ color:#fff0f6;
+}
+
+.letter p{
+ margin-bottom:19px;
+}
+
+.pink{
+ color:#ffb3d0;
+ text-shadow:0 0 8px #ff3388;
+ font-weight:bold;
+}
+
+/* Special Quote */
+
+.quote{
+ margin:30px 0;
+ padding:22px 17px;
+ border-left:3px solid #ff80b5;
+ background:linear-gradient(90deg,#ff4d9622,transparent);
+ border-radius:12px;
+ color:#ffc8de;
+ font-size:18px;
+ line-height:2;
+ font-style:italic;
+}
+
+/* Heart Divider */
+
+.heart-divider{
+ text-align:center;
+ font-size:25px;
+ margin:25px 0;
+ letter-spacing:8px;
+}
+
+/* Signature */
+
+.signature{
+ text-align:right;
+ font-family:'Dancing Script',cursive;
+ font-size:35px;
+ line-height:1.5;
+ color:#ffc0da;
+ margin:35px 0;
+}
+
+/* Ending */
+
+.ending{
+ text-align:center;
+ padding:25px 10px;
+ border-radius:20px;
+ background:linear-gradient(135deg,#ff2e7930,#9b005030);
+ border:1px solid #ff91bb66;
+}
+
+.ending h2{
+ font-family:'Dancing Script',cursive;
+ font-size:35px;
+ color:#ffbed9;
+ margin-bottom:15px;
+}
+
+.ending p{
+ font-size:19px;
+ line-height:2;
+ color:#ffe0ec;
+}
+
+.infinity{
+ font-size:45px;
+ color:#ff9dc5;
+ animation:beat 2s infinite;
+ display:block;
+ margin:15px;
+}
+
+/* Button */
+
+.love-btn{
+ display:block;
+ margin:30px auto;
+ padding:15px 30px;
+ border:none;
+ border-radius:50px;
+ color:white;
+ background:linear-gradient(45deg,#ff176a,#b00055);
+ font-size:16px;
+ cursor:pointer;
+ box-shadow:0 0 25px #ff3b8a;
+ transition:.3s;
+}
+
+.love-btn:hover{
+ transform:scale(1.08);
+ box-shadow:0 0 40px #ff80b5;
+}
+
+.footer{
+ text-align:center;
+ margin-top:30px;
+ font-family:'Dancing Script',cursive;
+ font-size:27px;
+ color:#ffb9d5;
+}
+
+/* Popup */
+
+.popup{
+ position:fixed;
+ inset:0;
+ z-index:10;
+ display:none;
+ justify-content:center;
+ align-items:center;
+ background:#14000feF;
+ padding:20px;
+}
+
+.popup-box{
+ max-width:400px;
+ padding:35px 25px;
+ border:1px solid #ff94be;
+ border-radius:25px;
+ background:linear-gradient(145deg,#790039,#29001e);
+ text-align:center;
+ box-shadow:0 0 40px #ff3185;
+ animation:show .6s ease;
+}
+
+.popup-box h2{
+ color:#ffb8d5;
+ font-family:'Dancing Script',cursive;
+ font-size:38px;
+ margin-bottom:20px;
+}
+
+.popup-box p{
+ line-height:2;
+ font-size:17px;
+}
+
+.close{
+ margin-top:20px;
+ padding:10px 25px;
+ border:0;
+ border-radius:30px;
+ background:#ff4a91;
+ color:white;
+ cursor:pointer;
+}
+
+@media(max-width:500px){
+ .container{padding:25px 17px;margin:20px auto}
+ h1{font-size:23px}
+ .letter{font-size:15px}
+ .subtitle{font-size:29px}
+ .signature{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="rose">🌹❤️🌹</div>
+
+<h1>माझ्या Paru साठी…</h1>
+
+<div class="subtitle">A Letter From My Heart 💌</div>
+
+<div class="date">AUGUST 2026 • OUR BEAUTIFUL MEMORIES</div>
+
+<div class="line"></div>
+
+<div class="letter">
+
+<p><span class="pink">प्रिय Paru,</span></p>
+
+<p>कुठून सुरुवात करू हेच कळत नाहीये… कारण तुझ्याबद्दल लिहायला बसलो की शब्द कमी पडतात आणि आठवणी खूप काही सांगू लागतात.</p>
+
+<p>माहितेय Paru, आयुष्यात अनेक माणसं भेटतात, पण प्रत्येकजण मनात जागा निर्माण करू शकत नाही. तू मात्र माझ्या मनात अशी जागा निर्माण केली आहेस, जिथे तुझ्याशिवाय दुसऱ्या कोणाचाही विचार येत नाही. ❤️</p>
+
+<p>आपली पहिली भेट Office मध्ये झाली. तेव्हा कदाचित आपल्याला माहीतही नव्हतं की पुढे या छोट्या छोट्या भेटी इतक्या सुंदर आठवणी बनतील.</p>
+
+<p>Room जवळची भेट, Room समोरचे क्षण, Office जवळचं Garden, Tea Shop मधल्या गप्पा, माझ्या घराजवळचं Garden आणि आपली दुसरी Tea Shop…</p>
+
+<p>Paru, ही सात ठिकाणं माझ्यासाठी फक्त ठिकाणं नाहीत. या प्रत्येक जागेत माझ्या मनाचा एक सुंदर क्षण जपलेला आहे. कधी कधी वाटतं, पुन्हा त्या सगळ्या जागी तुझ्यासोबत जावं आणि तेच क्षण पुन्हा एकदा जगावेत. 🥹</p>
+
+<div class="quote">
+तुझं हसणं पाहिलं की माझ्या चेहऱ्यावर नकळत हसू येतं. तुझ्याशी बोललं की मन हलकं होतं. आणि तू जवळ नसलीस तरी तुझ्या आठवणी मनात सतत असतात.
+</div>
+
+<p>मला तुझ्याकडून महागड्या भेटवस्तू नकोत, मोठमोठी वचनं नकोत. कधी वेळ मिळाला तर दोन मिनिटं मनापासून बोलावंसं वाटतं. कधी माझी आठवण आली तर एक छोटासा मेसेज करावासं वाटतं. कारण माझ्यासाठी तुझा वेळ आणि तुझ्या मनातली माझी जागा खूप मौल्यवान आहे.</p>
+
+<p>मला तुझ्यासोबत प्रत्येक वेळी हसायचं आहे, कधी लहान मुलांसारखं भांडायचं आहे, पुन्हा एकमेकांची समजूत काढायची आहे आणि आयुष्यातल्या छोट्या छोट्या गोष्टींमध्ये आनंद शोधायचा आहे.</p>
+
+<p>कधी माझ्याकडून चूक झाली तर मला समजावून सांग. कधी तुला वाईट वाटलं तर मनात ठेवू नकोस. कारण मला फक्त तुझ्यासोबत चांगले दिवस घालवायचे नाहीत, तर कठीण दिवसांतसुद्धा तुझ्या भावना समजून घ्यायच्या आहेत.</p>
+
+<p><span class="pink">Paru, एक गोष्ट कायम लक्षात ठेव…</span></p>
+
+<p>तू माझ्यासाठी सुंदर आहेस म्हणून मी तुझ्यावर प्रेम करत नाही, तर तुझ्यासोबत असताना मला जे सुंदर वाटतं, त्या भावनेवर मी प्रेम करतो.</p>
+
+<p>तुझं हसणं, तुझं बोलणं, तुझा राग, तुझं लहान मुलांसारखं वागणं… या सगळ्या छोट्या गोष्टी माझ्यासाठी खास आहेत.</p>
+
+<p>मला भविष्य माहीत नाही. उद्या काय होईल हेही माहीत नाही. पण आज माझ्या मनात तुझ्याबद्दल जे प्रेम आहे, ते खोटं नाही. मला तुझ्या आनंदाचा आदर करायचा आहे, तुझ्या स्वप्नांना समजून घ्यायचं आहे आणि तुझ्या प्रत्येक निर्णयाचा सन्मान करायचा आहे.</p>
+
+<p>मला फक्त एवढंच सांगायचं आहे की आपल्या या सात आठवणी माझ्यासाठी आयुष्यभर जपून ठेवण्यासारख्या आहेत.</p>
+
+<div class="quote">
+कदाचित तुला कधी कळणारही नाही की तुझ्या एका छोट्याशा हसण्याने माझा किती मोठा दिवस सुंदर होतो. ❤️
+</div>
+
+<p>शेवटी एवढंच…</p>
+
+<p>जर कधी आयुष्यात मागे वळून पाहिलंस, तर आपल्या या छोट्या छोट्या आठवणी आठवून एकदा तरी हस. कारण त्या क्षणांमध्ये मी मनापासून आनंदी होतो.</p>
+
+<p>तुझ्या चेहऱ्यावरचं हसू कधीच कमी होऊ नये, तुझी स्वप्नं पूर्ण व्हावीत आणि तुला आयुष्यात भरपूर आनंद मिळावा, हीच मनापासून इच्छा आहे.</p>
+
+<p class="pink">I Love You, Paru! ❤️</p>
+
+</div>
+
+<div class="signature">
+तुझ्या आठवणी जपणारा,<br>
+Forever Yours,<br>
+Bhushan ❤️
+</div>
+
+<div class="heart-divider">💕 🌹 💕</div>
+
+<div class="ending">
+
+<h2>My Paru ❤️</h2>
+
+<p>
+आपली गोष्ट अजून संपलेली नाही…<br>
+कारण काही आठवणी संपत नाहीत,<br>
+त्या कायम मनात जगत राहतात.
+</p>
+
+<span class="infinity">♾️</span>
+
+<p>आज, उद्या आणि प्रत्येक सुंदर आठवणीत… ❤️</p>
+
+</div>
+
+<button class="love-btn" onclick="openLove()">
+तुझ्यासाठी एक छोटीशी गोष्ट 💌
+</button>
+
+<div class="footer">
+Made With Love<br>
+Bhushan ❤️ Paru
+</div>
+
+</div>
+
+<!-- Special Popup -->
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<h2>My Dear Paru ❤️</h2>
+
+<p>
+तुझं हसू माझ्यासाठी खूप खास आहे.<br>
+तू नेहमी आनंदी राहावीस,<br>
+हीच माझी मनापासून इच्छा आहे. 🥹<br><br>
+खूप खूप प्रेम! ❤️🌹
+</p>
+
+<button class="close" onclick="closeLove()">Close ❤️</button>
+</div>
+</div>
+
+<script>
+
+// Floating Hearts
+function createHeart(){
+ const heart=document.createElement('div');
+ heart.className='heart';
+ heart.innerHTML=['❤️','💕','💗','💖','🌹','✨'][Math.floor(Math.random()*6)];
+ heart.style.left=Math.random()*100+'vw';
+ heart.style.fontSize=(15+Math.random()*22)+'px';
+ heart.style.animationDuration=(5+Math.random()*6)+'s';
+
+ document.body.appendChild(heart);
+
+ setTimeout(()=>heart.remove(),11000);
+}
+
+setInterval(createHeart,450);
+
+// Popup
+function openLove(){
+ document.getElementById('popup').style.display='flex';
+}
+
+function closeLove(){
+ document.getElementById('popup').style.display='none';
+}
+
+</script>
+
+</body>
+</html>
